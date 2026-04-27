@@ -75,6 +75,7 @@ class TestOrderFlow(BaseSeleniumTest):
         self.order_page.fill_second_step(delivery_date, rental_period, color, comment)
 
         assert self.order_page.is_success_modal_displayed()
+        assert OrderTestData.SUCCESS_MESSAGE in self.order_page.get_success_message()
 
         self.main_page.click_scooter_logo()
         assert self.main_page.is_main_page_opened()

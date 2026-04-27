@@ -1,6 +1,8 @@
 class OrderTestData:
     """Данные для позитивного сценария заказа"""
 
+    SUCCESS_MESSAGE = "Заказ оформлен"
+
     USER_TOP = {
         "name": "Иван",
         "last_name": "Петров",

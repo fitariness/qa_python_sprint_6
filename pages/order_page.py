@@ -98,3 +98,6 @@ class OrderPage(BasePage):
 
     def is_success_modal_displayed(self):
         return self.wait_visible(Loc.SUCCESS_MODAL).is_displayed()
+
+    def get_success_message(self):
+        return self.wait_visible(Loc.SUCCESS_MODAL).text
